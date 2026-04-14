@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر رغد | RAGHAD Store</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>RAGHAD</h1>
+            <span>Store</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">الرئيسية</a></li>
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2 class="animate-text">اكتشفي سر جمالك الحقيقي</h2>
+            <p class="animate-text-delay">مجموعة متكاملة من أرقى منتجات العناية بالبشرة والشعر، صُممت خصيصاً لتمنحكِ النضارة والتألق الذي تستحقينه.</p>
+            <a href="#products" class="btn primary-btn animate-btn">تسوقي الآن</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="section-title">
+            <h2>منتجاتنا الحصرية</h2>
+            <p>Our Exclusive Collection</p>
+            <div class="line"></div>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be injected here via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <div class="product-category" id="modalCategory"></div>
+                    <h2 class="product-title-ar" id="modalTitleAr"></h2>
+                    <h4 class="product-title-en" id="modalTitleEn"></h4>
+                    <p class="modal-desc" id="modalDesc">تفاصيل إضافية حول هذا المنتج الفاخر، صُمم بمكونات طبيعية ليمنحك أفضل النتائج.</p>
+                    <div class="product-price" id="modalPrice"></div>
+                    <button class="btn primary-btn" style="width: 100%; margin-top: 1rem;"><i class="fas fa-shopping-cart"></i> إتمام الشراء الآن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>RAGHAD Store</h3>
+                <p>لمسة من الفخامة والجمال الطبيعي</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                    <li><a href="#">سياسة الاسترجاع</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>تابعنا</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RAGHAD Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== AI Chatbot Widget ===== -->
+    <div id="chatbot-bubble" title="تحدث مع مساعدة رغد">
+        <i class="fas fa-comments"></i>
+        <span class="chat-badge">1</span>
+    </div>
+
+    <div id="chatbot-window" class="chatbot-hidden">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-user-nurse"></i>
+            </div>
+            <div class="chatbot-header-info">
+                <span class="chatbot-name">لينا | مساعدة رغد</span>
+                <span class="chatbot-status"><span class="status-dot"></span> متصلة الآن</span>
+            </div>
+            <button id="chatbot-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Messages injected by JS -->
+        </div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="اكتبي سؤالك هنا..." autocomplete="off">
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <!-- ===== End Chatbot ===== -->
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
